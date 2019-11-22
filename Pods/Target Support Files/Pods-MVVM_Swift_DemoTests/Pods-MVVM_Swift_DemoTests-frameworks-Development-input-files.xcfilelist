@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-MVVM_Swift_DemoTests/Pods-MVVM_Swift_DemoTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/DGActivityIndicatorView/DGActivityIndicatorView.framework

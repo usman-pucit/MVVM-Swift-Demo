@@ -1,0 +1,22 @@
+{
+    "poiList": [
+        {
+            "id": 1,
+            "coordinate": {
+                "latitude": 50.0,
+                "longitude": 100.0
+            },
+            "fleetType": "TAXI",
+            "heading": 256.09262940636745
+        },
+        {
+            "id": 2,
+            "coordinate": {
+                "latitude": 100.0,
+                "longitude": 200.0
+            },
+            "fleetType": "POOLING",
+            "heading": 49.42401748477582
+        }
+    ]
+}

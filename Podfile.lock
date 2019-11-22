@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.8.2)
+  - DGActivityIndicatorView (2.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.2)
+  - DGActivityIndicatorView
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - DGActivityIndicatorView
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
+
+PODFILE CHECKSUM: a6e1f8afa029273b5f04841727d5353d0fea1e20
+
+COCOAPODS: 1.8.4
