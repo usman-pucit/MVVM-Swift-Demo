@@ -14,7 +14,5 @@ width="900" height="330">
 
 # Venders or Third party
 
-### Alamofire -- Networking 
-### DGActivityIndicatorView -- Activity loader
 * `Alamofire` Networking with Alamofire
 * `DGActivityIndicatorView` Activity Indicator
