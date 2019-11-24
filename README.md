@@ -1,3 +1,8 @@
+
+# Diagram: 
+<img src="https://github.com/usman-pucit/MVVM-Swift-Demo/blob/development/images/mvvm-diagram-details.png"
+width="600" height="360">
+
 #  Application Main Components
 
 ### MVVM architecture 
