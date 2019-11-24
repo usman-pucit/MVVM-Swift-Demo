@@ -1,18 +1,20 @@
 
 # Diagram: 
 <img src="https://github.com/usman-pucit/MVVM-Swift-Demo/blob/development/images/mvvm-diagram-details.png"
-width="800" height="330">
+width="900" height="330">
 
 #  Application Main Components
 
-### MVVM architecture 
-### One section with vehicles listing (https://vehicleslist.free.beeceptor.com/cabs-list) 
-### Networking Layer user with APIRouter & Codable 
-### 5 configurations environments are setup for different environments but they are using same configurations.  
-### Unit testing for ViewModel 
-### DI, Generics 
+ * `MVVM` Model-ViewModel-Model architecture
+ * `Alamofire` APIRouter & Codable (simple network layer for a small project)
+ * `Environment` Multiple environment's setup
+ * `Unit Testing` ViewModel test cases
+ * `Generics` 
+ * `Dependency Injection`
 
 # Venders or Third party
 
 ### Alamofire -- Networking 
 ### DGActivityIndicatorView -- Activity loader
+* `Alamofire` Networking with Alamofire
+* `DGActivityIndicatorView` Activity Indicator
