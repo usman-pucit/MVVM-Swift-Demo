@@ -14,7 +14,7 @@ import Foundation
 // APIRouter Enum to create request
 
 enum APIRouter: URLRequestConvertible {
-    case vehiclelist
+    case vehiclelist(p1Lat: Double, p2Lat: Double,p1Long : Double,p2Long : Double)
     // MARK: - HTTPMethod
     
     private var method: HTTPMethod {
@@ -28,8 +28,8 @@ enum APIRouter: URLRequestConvertible {
     
     private var path: String {
         switch self {
-        case .vehiclelist:
-            return "cabs-list"
+        case .vehiclelist(let p1Lat, let p2Lat, let p1Long, let p2Long):
+            return "?p1Lat=\(p1Lat)&p1Lon=\(p1Long)&p2Lat=\(p2Lat)&p2Lon=\(p2Long)"
         }
     }
     

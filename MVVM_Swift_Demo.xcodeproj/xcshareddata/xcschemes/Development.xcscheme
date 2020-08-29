@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E1DDA03230AAE8E0085BB03"
+               BlueprintIdentifier = "8EAAC56C2388596D00396BF3"
                BuildableName = "MVVM_Swift_DemoTests.xctest"
                BlueprintName = "MVVM_Swift_DemoTests"
                ReferencedContainer = "container:MVVM_Swift_Demo.xcodeproj">
@@ -56,7 +56,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E1DDA03230AAE8E0085BB03"
+               BlueprintIdentifier = "8EAAC56C2388596D00396BF3"
                BuildableName = "MVVM_Swift_DemoTests.xctest"
                BlueprintName = "MVVM_Swift_DemoTests"
                ReferencedContainer = "container:MVVM_Swift_Demo.xcodeproj">

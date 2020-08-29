@@ -10,6 +10,7 @@ import Alamofire
 @testable import MVVM_Swift_Demo
 import XCTest
 
+@available(iOS 13.0, *)
 class VehilceListingViewModelTests: XCTestCase {
     
     // MARK :-  Propertise
@@ -58,7 +59,7 @@ class VehilceListingViewModelTests: XCTestCase {
             expectation.fulfill()
         }
         // fetch vehicles list service call
-        viewModel.getVehiclesListRquest()
+        viewModel.fetchVehiclesList(coordinates: vc.coordinates)
         wait(for: [expectation], timeout: 5.0)
     }
     
@@ -80,7 +81,7 @@ class VehilceListingViewModelTests: XCTestCase {
             expectation.fulfill()
         }
         
-        viewModel.getVehiclesListRquest()
+        viewModel.fetchVehiclesList(coordinates: vc.coordinates)
         wait(for: [expectation], timeout: 5.0)
     }
     
@@ -102,7 +103,7 @@ class VehilceListingViewModelTests: XCTestCase {
             expectation.fulfill()
         }
         
-        viewModel.getVehiclesListRquest()
+        viewModel.fetchVehiclesList(coordinates: vc.coordinates)
         wait(for: [expectation], timeout: 5.0)
     }
     
@@ -120,7 +121,7 @@ class VehilceListingViewModelTests: XCTestCase {
             expectation.fulfill()
         }
         
-        viewModel.getVehiclesListRquest()
+        viewModel.fetchVehiclesList(coordinates: vc.coordinates)
         wait(for: [expectation], timeout: 5.0)
     }
     
@@ -138,7 +139,7 @@ class VehilceListingViewModelTests: XCTestCase {
             }
         }
     
-        viewModel.getVehiclesListRquest()
+        viewModel.fetchVehiclesList(coordinates: vc.coordinates)
         wait(for: [expectation], timeout: 5.0)
     }
     

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eHr-ZO-f4e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eHr-ZO-f4e">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,30 +11,30 @@
         <!--Vehicles-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="VehiclesListController" id="BYZ-38-t0r" customClass="PostsListController" customModule="FreeNowAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VehiclesListController" id="BYZ-38-t0r" customClass="VehiclesListController" customModule="MVVM_Swift_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wpW-Rh-GV5">
-                                <rect key="frame" x="0.0" y="52" width="600" height="548"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="766"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VehicleListCell" rowHeight="110" id="Vfz-BE-Jbe" customClass="VehicleListCell" customModule="FreeNowAssignment" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="110"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VehicleListCell" rowHeight="110" id="Vfz-BE-Jbe" customClass="VehicleListCell" customModule="MVVM_Swift_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vfz-BE-Jbe" id="ia4-ee-Msy">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="110"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0X-XK-fwN" customClass="RoundedView" customModule="FreeNowAssignment" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="8" width="580" height="94"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0X-XK-fwN" customClass="RoundedView" customModule="MVVM_Swift_Demo" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="8" width="394" height="94"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRC-cR-oNY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="580" height="94"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="94"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taxi" translatesAutoresizingMaskIntoConstraints="NO" id="5DY-5c-Phg">
-                                                                    <rect key="frame" x="15" y="-17" width="128" height="128"/>
+                                                                    <rect key="frame" x="15" y="15" width="64" height="64"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,8 +42,8 @@
                                                                 <constraint firstItem="5DY-5c-Phg" firstAttribute="leading" secondItem="qRC-cR-oNY" secondAttribute="leading" constant="15" id="7hw-LR-6et"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="351.30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEP-fY-31R" customClass="KernedLabel" customModule="FreeNowAssignment" customModuleProvider="target">
-                                                            <rect key="frame" x="364.5" y="64" width="207.5" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="351.30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEP-fY-31R" customClass="KernedLabel" customModule="MVVM_Swift_Demo" customModuleProvider="target">
+                                                            <rect key="frame" x="239.5" y="64" width="146.5" height="20"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -52,8 +54,8 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="heading:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTf-U6-bNz" customClass="KernedLabel" customModule="FreeNowAssignment" customModuleProvider="target">
-                                                            <rect key="frame" x="157" y="37" width="82" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="heading:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTf-U6-bNz" customClass="KernedLabel" customModule="MVVM_Swift_Demo" customModuleProvider="target">
+                                                            <rect key="frame" x="93" y="37" width="82" height="20"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,8 +66,8 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="351.30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSw-xu-SXK" customClass="KernedLabel" customModule="FreeNowAssignment" customModuleProvider="target">
-                                                            <rect key="frame" x="241" y="37" width="61.5" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="351.30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSw-xu-SXK" customClass="KernedLabel" customModule="MVVM_Swift_Demo" customModuleProvider="target">
+                                                            <rect key="frame" x="177" y="37" width="61.5" height="20"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,8 +78,8 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="351.30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX1-cN-mEn" customClass="KernedLabel" customModule="FreeNowAssignment" customModuleProvider="target">
-                                                            <rect key="frame" x="157" y="64" width="207.5" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="351.30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX1-cN-mEn" customClass="KernedLabel" customModule="MVVM_Swift_Demo" customModuleProvider="target">
+                                                            <rect key="frame" x="93" y="64" width="146.5" height="20"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,8 +97,8 @@
                                                                 <constraint firstAttribute="width" constant="6" id="5Ti-3a-fqD"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POOLING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jN8-Ir-EE7" customClass="KernedLabel" customModule="FreeNowAssignment" customModuleProvider="target">
-                                                            <rect key="frame" x="248" y="3" width="84.5" height="24"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POOLING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jN8-Ir-EE7" customClass="KernedLabel" customModule="MVVM_Swift_Demo" customModuleProvider="target">
+                                                            <rect key="frame" x="155" y="3" width="84.5" height="24"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
                                                             <color key="textColor" red="0.76862745099999996" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -171,7 +173,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9S-ok-XBp" customClass="DGActivityIndicatorView">
-                                <rect key="frame" x="225" y="225" width="150" height="150"/>
+                                <rect key="frame" x="132" y="373" width="150" height="150"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="ILF-Pc-8sw"/>
@@ -194,55 +196,11 @@
                     <connections>
                         <outlet property="spinner" destination="Q9S-ok-XBp" id="YbJ-5Z-fF2"/>
                         <outlet property="tableView" destination="wpW-Rh-GV5" id="Le7-Zh-AYp"/>
-                        <segue destination="ujg-GG-edH" kind="show" identifier="VehiclesMapController" id="goc-h4-Rn2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.2" y="118.22660098522168"/>
-        </scene>
-        <!--Vehicles Map Controller-->
-        <scene sceneID="fcG-0h-8ZO">
-            <objects>
-                <viewController storyboardIdentifier="VehiclesMapController" id="ujg-GG-edH" customClass="VehiclesMapController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rby-fK-TRW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="mutedStandard" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JX3-9h-Uzf">
-                                <rect key="frame" x="0.0" y="96" width="600" height="504"/>
-                                <connections>
-                                    <outlet property="delegate" destination="ujg-GG-edH" id="U0n-MX-AMD"/>
-                                </connections>
-                            </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zh8-dL-Hgf" customClass="DGActivityIndicatorView">
-                                <rect key="frame" x="225" y="225" width="150" height="150"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Son-Uc-iPg"/>
-                                    <constraint firstAttribute="width" constant="150" id="k8f-JJ-QLk"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="zh8-dL-Hgf" firstAttribute="centerY" secondItem="Rby-fK-TRW" secondAttribute="centerY" id="FbT-qj-iFD"/>
-                            <constraint firstItem="zh8-dL-Hgf" firstAttribute="centerX" secondItem="Rby-fK-TRW" secondAttribute="centerX" id="YlM-8x-FN1"/>
-                            <constraint firstItem="Zil-Lx-M2R" firstAttribute="trailing" secondItem="JX3-9h-Uzf" secondAttribute="trailing" id="kWp-3s-fYq"/>
-                            <constraint firstItem="JX3-9h-Uzf" firstAttribute="leading" secondItem="Zil-Lx-M2R" secondAttribute="leading" id="pbG-KM-RYd"/>
-                            <constraint firstItem="Zil-Lx-M2R" firstAttribute="bottom" secondItem="JX3-9h-Uzf" secondAttribute="bottom" id="qJH-p5-8ew"/>
-                            <constraint firstItem="JX3-9h-Uzf" firstAttribute="top" secondItem="Zil-Lx-M2R" secondAttribute="top" id="qfn-2T-jqC"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Zil-Lx-M2R"/>
-                    </view>
-                    <connections>
-                        <outlet property="mapView" destination="JX3-9h-Uzf" id="EHB-ql-kCG"/>
-                        <outlet property="spinner" destination="zh8-dL-Hgf" id="M5z-1C-Fgo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9SN-UA-J6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1962" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DvP-Kn-CHn">
@@ -250,7 +208,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eHr-ZO-f4e" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ftK-0g-11l">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>

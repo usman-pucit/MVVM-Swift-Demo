@@ -10,10 +10,10 @@ import Alamofire
 import Foundation
 
 class VehiclesListViewModel {
-    // MARK: - Properties
+   // MARK: - Properties
     
     var apiClient: APIClientProtocol?
-    var dataSource: GenericDataSource<PoiList>
+    var dataSource: GenericDataSource<PoiList>?
     var onError: ((String) -> ())?
     var setupLoader: ((Bool) -> ())?
     
@@ -35,7 +35,7 @@ class VehiclesListViewModel {
     
     // MARK: - Initializer
     
-    init(apiClient: APIClientProtocol = APIClient(), dataSource: GenericDataSource<PoiList> = VehicleListDatasource()) {
+    init(apiClient: APIClientProtocol = APIClient(), dataSource: GenericDataSource<PoiList>?) {
         self.apiClient = apiClient
         self.dataSource = dataSource
     }
@@ -47,6 +47,7 @@ class VehiclesListViewModel {
 /// Will fetch list of vehicles and update datasource on response
 
 extension VehiclesListViewModel: VehicleListViewContract {
+    
     /// Web service call to fetch list of vehicles at provided bounds
     /// from the given components.
     ///
@@ -55,8 +56,9 @@ extension VehiclesListViewModel: VehicleListViewContract {
     /// - Parameter p2Lat: point2 latitude as param.
     /// - Parameter p2Lon: point2 longitude as param.
     
-    func getVehiclesListRquest() {
-        let request = APIRouter.vehiclelist
+    func fetchVehiclesList(coordinates: (p1Lat: Double, p2Lat: Double, p1Long: Double, p2Long: Double)) {
+        let request = APIRouter.vehiclelist(p1Lat: coordinates.p1Lat, p2Lat: coordinates.p2Lat, p1Long: coordinates.p1Long, p2Long: coordinates.p2Long)
+        
         // check if api service object is initialized and not nil
         guard apiClient != nil else {
             errorMessage = APIError.requestError.rawValue
@@ -70,7 +72,7 @@ extension VehiclesListViewModel: VehicleListViewContract {
             if let error = response.error{
                 self?.errorMessage = error.localizedDescription
             }else if let response = response.result.value{
-                self?.dataSource.data.value = response.poiList ?? []
+                self?.dataSource?.data.value = response.poiList ?? []
             }else{
                 self?.errorMessage = APIError.requestError.rawValue
             }
