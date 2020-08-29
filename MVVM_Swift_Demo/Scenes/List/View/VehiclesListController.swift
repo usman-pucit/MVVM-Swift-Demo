@@ -30,14 +30,14 @@ class VehiclesListController: BaseViewController {
         
         viewModel = VehiclesListViewModel(dataSource: dataSource)
         
-        getVehiclesList()
+        bindViewModel()
     }
     
     /// Method to fetch vehicle list with a web service
     /// Update tableview on datsource update
     /// show activity laoder on web service call
     
-    private func getVehiclesList() {
+    private func bindViewModel() {
         viewModel?.setupLoader = { [weak self] loader in
             loader == true ? self?.showLoader() : self?.hideLoader()
         }

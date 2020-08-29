@@ -12,7 +12,7 @@ import Foundation
 class VehiclesListViewModel {
    // MARK: - Properties
     
-    var apiClient: APIClientProtocol?
+    var apiClient: APIClientProtocol
     var dataSource: GenericDataSource<PoiList>?
     var onError: ((String) -> ())?
     var setupLoader: ((Bool) -> ())?
@@ -59,14 +59,9 @@ extension VehiclesListViewModel: VehicleListViewContract {
     func fetchVehiclesList(coordinates: (p1Lat: Double, p2Lat: Double, p1Long: Double, p2Long: Double)) {
         let request = APIRouter.vehiclelist(p1Lat: coordinates.p1Lat, p2Lat: coordinates.p2Lat, p1Long: coordinates.p1Long, p2Long: coordinates.p2Long)
         
-        // check if api service object is initialized and not nil
-        guard apiClient != nil else {
-            errorMessage = APIError.requestError.rawValue
-            return
-        }
         
         showLoader = true
-        apiClient?.performRequest(route: request) { [weak self](response: DataResponse<VehicleListModel>) in
+        apiClient.performRequest(route: request) { [weak self](response: DataResponse<VehicleListModel>) in
             self?.showLoader = false
             
             if let error = response.error{

@@ -1,5 +1,5 @@
 //
-//  UIProtocols.swift
+//  Reusable.swift
 //  MVVM_Swift_Demo
 //
 //  Created by Malik Usman on 15/08/2019.

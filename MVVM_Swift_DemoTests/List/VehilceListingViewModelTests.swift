@@ -45,23 +45,6 @@ class VehilceListingViewModelTests: XCTestCase {
         super.tearDown()
     }
     
-    /// METHOD to test results if api client object not available
-    /// Expectation is will through and catch an error in error handler
-    
-    func testFetchWithNoService() {
-        let expectation = XCTestExpectation(description: "No service available")
-        
-        // giving no service to a view model
-        viewModel?.apiClient = nil
-        
-        // expected to not be able to fetch list of vehicles and through an error
-        viewModel?.onError = { _ in
-            expectation.fulfill()
-        }
-        // fetch vehicles list service call
-        viewModel.fetchVehiclesList(coordinates: vc.coordinates)
-        wait(for: [expectation], timeout: 5.0)
-    }
     
     
     /// METHOD to test if fetch vehicles list is working peoperly or not
@@ -78,28 +61,6 @@ class VehilceListingViewModelTests: XCTestCase {
         }
         
         dataSource.data.addObserver(self) { _ in
-            expectation.fulfill()
-        }
-        
-        viewModel.fetchVehiclesList(coordinates: vc.coordinates)
-        wait(for: [expectation], timeout: 5.0)
-    }
-    
-    /// Testing fetch vehiles list if apiclient is nil
-    /// Expectation is onError is called
-    
-    func testFetchNoVehiclesListModel() {
-        let expectation = XCTestExpectation(description: "No Vehicles List")
-        
-        // giving a service mocking error during fetching vehicles list
-        mockApiClient.vehicleModel = nil
-        viewModel?.apiClient = nil
-        
-        // expected completion to fail
-        viewModel = VehiclesListViewModel(apiClient: MockAPIClient(), dataSource: dataSource)
-        viewModel?.apiClient = nil
-        
-        viewModel.onError = { _ in
             expectation.fulfill()
         }
         
